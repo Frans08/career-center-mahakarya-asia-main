@@ -1,0 +1,26 @@
+@use "../abstracts/" as *;
+
+.cardKelebihan {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  &__icon {
+    background-color: $color-primary-red-02;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 48px;
+    height: 48px;
+    svg {
+      color: $color-primary-red-06;
+      width: 18px;
+      height: 18px;
+    }
+  }
+  .title {
+    color: $color-neutral-10;
+  }
+}

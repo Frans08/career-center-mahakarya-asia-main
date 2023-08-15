@@ -1,0 +1,27 @@
+@use "../abstracts/" as *;
+
+.homepage-main {
+  // min-height: 100vh;
+  background-color: $color-neutral-01;
+
+  .white {
+    background-color: #fff;
+    position: relative;
+    z-index: 3;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px,
+      rgba(17, 17, 26, 0.05) 0px 8px 32px;
+
+    border-radius: 96px;
+    padding: 48px 0;
+    transform: translateY(-90px);
+  }
+
+  @include display(tab-port) {
+  }
+  @include display(phone) {
+    .white {
+      border-radius: 32px;
+      padding: 24px 0;
+    }
+  }
+}

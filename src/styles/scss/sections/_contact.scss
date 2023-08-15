@@ -1,0 +1,106 @@
+@use "../abstracts/" as *;
+
+/* CONTACT */
+.contact {
+  @extend %section;
+  display: grid;
+  place-items: center;
+
+  &__container {
+    @extend %container;
+    margin-top: -90px; // translateX -90px untuk .whit di home
+    // background-image: url("/assets/bg1.png");
+    background-attachment: fixed;
+
+    padding: 64px 24px;
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(12, 1fr);
+  }
+  figure {
+    grid-column: 1 / span 5;
+    background-color: #ecf2f2;
+    border-radius: 40px;
+
+    img {
+      height: 536px;
+      object-fit: cover;
+      border-radius: 40px;
+
+      box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.12);
+      border: 8px solid $color-neutral-01;
+      transition: $transition;
+    }
+  }
+  article {
+    padding-left: 40px;
+    grid-column: 6 / span 7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+    .header {
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      span {
+      }
+      h2 {
+      }
+    }
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      p {
+      }
+      &__contacts {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        &-contact {
+          display: flex;
+          gap: 8px;
+          align-items: center;
+          svg {
+            width: 18px;
+            height: 18px;
+            color: $color-primary-red-06;
+          }
+          p {
+            color: $color-neutral-09;
+          }
+        }
+      }
+    }
+  }
+
+  /* MEDIA-QUERIES */
+  @include display(tab-port) {
+    &__container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    article {
+      padding-top: 40px;
+      padding-left: 0;
+      .content {
+        &__contacts {
+          grid-template-columns: 1fr;
+        }
+      }
+    }
+  }
+  @include display(phone) {
+    &__container {
+      padding: 48px 12px;
+      figure {
+        img {
+          height: 360px;
+        }
+      }
+    }
+  }
+}

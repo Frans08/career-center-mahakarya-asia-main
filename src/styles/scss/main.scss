@@ -1,0 +1,34 @@
+/* ■━■━■━■ base ■━■━■━■ */
+// @use "./base/reset";
+@use "./base/typography";
+
+/* ■━■━■━■ components ■━■━■━■ */
+@use "./components/cardKelas";
+@use "./components/cardPricing";
+@use "./components/button";
+@use "./components/tabs";
+@use "./components/testimonials";
+@use "./components/accordion";
+@use "./components/cardKelebihan";
+@use "./components/footer";
+@use "./components/carouselPartners";
+@use "./components/navbar";
+
+/* ■━■━■━■ pages ■━■━■━■ */
+@use "./pages/home";
+@use "./pages/kelas-page";
+
+/* ■━■━■━■ sections ■━■━■━■ */
+@use "./sections/welcome";
+@use "./sections/alur";
+@use "./sections/pricing";
+@use "./sections/kelas";
+@use "./sections/testimoni";
+@use "./sections/faqs";
+@use "./sections/kelebihan";
+@use "./sections/contact";
+@use "./sections/partners";
+@use "./sections/hero";
+
+/* ■━■━■━■ layout ■━■━■━■ */
+// @use "./layouts/layout";

@@ -1,0 +1,56 @@
+@use "../abstracts/" as *;
+
+/* KELAS */
+.kelebihan {
+  // min-height: 100vh;
+  // background-color: $color-primary-red-03;
+
+  &__container {
+    @extend %container;
+    padding: 64px 24px;
+    article {
+      display: grid;
+      gap: 32px;
+
+      .header {
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        span {
+        }
+        h2 {
+        }
+      }
+      .content {
+        p {
+        }
+        .cards {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          gap: 32px;
+        }
+      }
+    }
+  }
+
+  /* MEDIA-QUERIES */
+  @include display(tab-port) {
+    article {
+      .content {
+        .cards {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+    }
+  }
+  @include display(phone) {
+    article {
+      .content {
+        .cards {
+          grid-template-columns: 1fr;
+        }
+      }
+    }
+  }
+}

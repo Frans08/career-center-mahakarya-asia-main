@@ -1,0 +1,104 @@
+@use "../abstracts/" as *;
+
+/* WELCOME */
+.welcome {
+  @extend %section;
+  display: grid;
+  place-items: center;
+
+  &__container {
+    @extend %container;
+    padding: 64px 24px;
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(12, 1fr);
+  }
+  figure {
+    grid-column: 1 / span 6;
+    img {
+      width: 100%;
+      object-fit: cover;
+      box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.12);
+      border: 8px solid $color-neutral-01;
+      border-radius: 40px;
+      transition: $transition;
+      &:hover {
+        transform: rotate(-2deg) scale(1.05);
+      }
+    }
+  }
+  article {
+    padding-left: 40px;
+    grid-column: 7 / span 6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+    .header {
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      span {
+      }
+      h2 {
+      }
+    }
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      p {
+      }
+      &__stats {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        &-stat {
+          padding: 8px 16px;
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+          border-left: 4px solid $color-primary-red-06;
+          h3 {
+          }
+          span {
+            color: $color-neutral-07;
+            letter-spacing: 0.24px;
+          }
+        }
+      }
+    }
+  }
+
+  /* MEDIA-QUERIES */
+  @include display(tab-port) {
+    &__container {
+      display: flex;
+      flex-direction: column;
+    }
+    figure {
+      img {
+        transition: none;
+        &:hover {
+          transform: rotate(0) scale(1);
+        }
+      }
+    }
+    article {
+      padding-top: 40px;
+      padding-left: 0;
+      .content {
+        &__stats {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 12px;
+        }
+      }
+    }
+  }
+  @include display(phone) {
+    &__container {
+      padding: 48px 12px;
+    }
+  }
+}
