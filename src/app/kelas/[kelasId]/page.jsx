@@ -1,5 +1,6 @@
 import React from "react";
 import { notFound } from "next/navigation";
+import FaqSection from "@/sections/homepage/FaqSection";
 
 async function ClassPage(props) {
   // const kelas = await fetchData(props.params.kelasId);
@@ -7,6 +8,7 @@ async function ClassPage(props) {
 
   return (
     <main className="kelas-main">
+      <FaqSection />
       {/* <h1>kelas {props.params.kelasId}</h1> */}
       {/* <h1>{kelas.name}</h1>
       <p>{kelas.desc}</p> */}
